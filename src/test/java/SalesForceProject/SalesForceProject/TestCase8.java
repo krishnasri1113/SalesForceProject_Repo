@@ -32,8 +32,7 @@ public class TestCase8 extends BrowserUtility
 		 menu.click();
 		 WebElement developerconsole=driver.findElement(By.xpath("//a[contains(@class,'debugLogLink menuButtonMenuLink')]"));
 		 waitForPageElementTovisible(developerconsole);
-		 //String mainwindow = driver.getWindowHandle();  
-		  Thread.sleep(3000);
+		 Thread.sleep(3000);
 	       developerconsole.click();//Assuming clicking on this element brings out the new window
 	       ArrayList<String> listofwindows=new ArrayList(driver.getWindowHandles());
 	       Thread.sleep(5000);

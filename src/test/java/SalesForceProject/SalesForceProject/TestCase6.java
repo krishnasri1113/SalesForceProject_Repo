@@ -112,15 +112,15 @@ public class TestCase6 extends BrowserUtility{
 			 waitForPageElementTovisible(saveimage);
 			 saveimage.click();
 			 System.out.println("image uploaded successfully");
-			 driver.switchTo().frame(driver.findElement(By.xpath("//iframe[@id='uploadPhotoContentId']")));
-			 WebElement cropimage=driver.findElement(By.xpath("//div[@class='imgCrop_handle imgCrop_handleNE']"));
+			driver.switchTo().frame(driver.findElement(By.xpath("//iframe[@id='uploadPhotoContentId']")));
+			 /*WebElement cropimage=driver.findElement(By.xpath("//div[@class='imgCrop_handle imgCrop_handleNE']"));
 			 Actions act=new Actions(driver);
-			 act.dragAndDropBy(cropimage, 100, 20);
-			 WebElement savemyimage=driver.findElement(By.xpath("//input[@id='j_id0:j_id7:save']"));
+			 act.dragAndDropBy(cropimage, 100, 20);*/
+			 WebElement savemyimage=driver.findElement(By.xpath("//input[contains(@value,'Save')]"));
 			 waitForPageElementTovisible(savemyimage);
 			 saveimage.click();
 			 Thread.sleep(3000);
-			 saveimage.click();
+			 savemyimage.click();
 			 Thread.sleep(10000);
 			 //quitbrowser();
 			  

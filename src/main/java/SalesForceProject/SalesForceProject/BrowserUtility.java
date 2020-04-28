@@ -17,7 +17,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class BrowserUtility {
        static WebDriver driver=null;
         static String url,username,password,wrongusername,wrongpassword,lastname,postmessage,file,accountname,viewname,leadlastname,leadcompany,
-       contacteditaccountname,contactlastnameedit,editviewinaccount,mergeaccountname,contactviewname,contactuniquename,optname,reportname;
+       contacteditaccountname,contactlastnameedit,editviewinaccount,mergeaccountname,contactviewname,contactuniquename,optname,reportname,contactnewview,contactnewuniqueview;
    
        static void launchbrowser(String sbrowser)
        {
@@ -86,6 +86,11 @@ public class BrowserUtility {
    			optname=row19.getCell(1).getStringCellValue();
    			HSSFRow row20=myExcleSheet.getRow(19);
    			reportname=row20.getCell(1).getStringCellValue();
+   			HSSFRow row21=myExcleSheet.getRow(20);
+   			contactnewview=row21.getCell(1).getStringCellValue();
+   			HSSFRow row22=myExcleSheet.getRow(21);
+   			contactnewuniqueview=row22.getCell(1).getStringCellValue();
+   			
    			
 
 
